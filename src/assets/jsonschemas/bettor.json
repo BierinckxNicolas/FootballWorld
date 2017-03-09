@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id":"http://socialsecurity.be/REST/sdadrs/v1/bettor.json",
+	"extends": {"$ref": "include/halResource.json#"},
+	"title": "Bettor",
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer"},
+		"ssin": {"type": "string"},
+		"firstName": {"type": "string"},
+		"lastName" : {"type": "string"},
+		"mailAddress" : {"type": "string"},
+		"blocked" : {"type": "boolean"}
+	},
+	"required": ["ssin"]
+}

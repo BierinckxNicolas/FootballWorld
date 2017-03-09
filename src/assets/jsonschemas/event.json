@@ -1,0 +1,17 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id":"http://socialsecurity.be/REST/sdadrs/v1/event.json",
+	"extends": {"$ref": "include/halResource.json#"},
+	"title": "Event",
+	"type": "object",
+	"properties": {
+	    "id": {"type": "integer"},
+		"season" : {"$ref": "common.json#/definitions/commonIdLink"},
+		"homeTeam" : {"$ref": "common.json#/definitions/commonIdLink"},
+		"visitorTeam" : {"$ref": "common.json#/definitions/commonIdLink"},
+		"startTime" : {"type": "string", "format": "date-time"},
+		"homeScore" : {"type": "integer"},
+		"visitorScore" : {"type": "integer"}
+	},
+	"required": ["season", "homeTeam", "visitorTeam", "startTime"]
+}

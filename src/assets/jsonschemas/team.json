@@ -1,0 +1,13 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id":"http://socialsecurity.be/REST/sdadrs/v1/team.json",
+	"extends": {"$ref": "include/halResource.json#"},
+	"title": "Team",
+	"javaType": "be.smals.sda.drs.rest.representations.Team",
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer"},
+		"name": {"type": "string"}
+	},
+	"required": ["name"]
+}

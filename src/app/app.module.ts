@@ -1,7 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 // Own modules
@@ -17,9 +14,6 @@ import { routes } from './app.routes';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
     HomeModule,
     AdminModule,
     RouterModule.forRoot(routes)

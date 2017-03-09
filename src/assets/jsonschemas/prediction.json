@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id":"http://socialsecurity.be/REST/sdadrs/v1/prediction.json",
+	"extends": {"$ref": "include/halResource.json#"},
+	"title": "Prediction",
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer"},
+		"event": {"$ref": "common.json#/definitions/commonIdLink"},
+		"bettor": {"$ref": "common.json#/definitions/commonIdLink"},
+		"guess": {"$ref": "#definitions/predictionType"}
+	},
+	"required": ["event", "bettor", "guess"],
+	"definitions": {
+		"predictionType" : {
+			"type:": "string",
+			"enum": ["1", "2", "X"],
+			"javaEnumNames": ["HOME_TEAM_WINS", "VISITOR_TEAM_WINS", "DRAW"],
+			"javaName": "PredictionType"
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id":"http://socialsecurity.be/REST/sdadrs/v1/season.json",
+	"extends": {"$ref": "include/halResource.json#"},
+	"title": "Season",
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer"},
+		"name": {"type": "string"},
+		"startDate": {"type": "string", "format": "date-time"},
+		"endDate": {"type": "string", "format": "date-time"},
+		"competition" : {"$ref": "common.json#/definitions/commonIdLink"},
+		"events" : {"type": "array", "items": {"$ref": "common.json#/definitions/commonIdLink"}}
+	},
+	"required": ["name", "startDate", "competition", "endDate"]
+}

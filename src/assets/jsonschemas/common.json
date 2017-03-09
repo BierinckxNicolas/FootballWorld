@@ -1,0 +1,20 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://socialsecurity.be/REST/sdadrs/v1/common.json",
+	"title": "Common",
+	"description": "Common definitions for sda drs.",
+	"definitions": {
+		"commonIdLink": {
+			"type": "object",
+			"extends": {
+				"$ref": "include/halResource.json#/definitions/link"
+			},
+			"properties": {
+				"id": {
+					"type": "integer"
+				}
+			},
+			"javaType": "be.smals.sda.drs.rest.representations.CommonIdLink"
+		}
+	}
+}

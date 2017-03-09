@@ -1,3 +1,13 @@
 <p>
   admin works!
 </p>
+
+
+<json-schema-form
+  [schema]="schemaUrl"
+  loadExternalAssets="false"
+  (onSubmit)="updateObject($event)"
+  [framework]="selectedFramework">
+</json-schema-form>
+
+<!--../../assets/jsonschemas/bettor.json-->
